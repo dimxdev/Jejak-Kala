@@ -1,0 +1,138 @@
+# Bab 1: Mesir Kuno. Rencana lengkap: docs/plan-mesir.md
+# Kunci memakai bahasa Inggris, teks untuk pemain memakai bahasa Indonesia.
+# `verify: true` pada tahun = belum dicek ke sumber; `bun run content:check` mendaftarnya.
+
+id: mesir
+track: world
+title: Mesir Kuno
+tagline: Ukur, hitung, dan baca sandi di tepi Sungai Nil.
+region: Lembah Sungai Nil
+theme: mesir
+banner: mesir/banner
+
+years:
+  start: -3100
+  end: -30
+  approximate: true
+
+# where the Nile delta sits on shared/world-map (percent of the picture)
+map:
+  x: 38.5
+  y: 43.5
+
+requires: []
+examRequires: all
+
+missions:
+  - id: m1-banjir-nil
+    type: simulation
+    title: "Tahun Pertama: Banjir Nil"
+    summary: >-
+      Jalani setahun sebagai petani: baca Nilometer, tentukan lahan dan benih,
+      lalu bayar pajak sesuai tinggi banjir.
+    place: Lembah Nil
+    years:
+      - start: -2500
+        approximate: true
+    workload: light
+    perspective:
+      name: Meryt
+      role: Petani tepi Nil
+      fictional: true
+
+  - id: m2-tali-penyurvei
+    type: math-puzzle
+    title: Tali Para Penyurvei
+    summary: >-
+      Banjir menghapus batas ladang. Pasang patok dan rentangkan tali untuk
+      memulihkannya, lengkap dengan hitungan luas ala Mesir.
+    place: Lembah Nil
+    years:
+      - start: -1850
+        approximate: true
+    workload: medium
+    perspective:
+      name: Senu
+      role: Juru ukur (penegang tali)
+      fictional: true
+
+  - id: m3-roti-dan-bir
+    type: investigation
+    title: Roti dan Bir untuk Para Pekerja
+    summary: >-
+      Periksa bukti di desa pekerja Giza, lalu bagi roti secara adil dengan
+      pecahan satuan seperti di Papirus Rhind.
+    place: Giza
+    years:
+      - start: -2500
+        approximate: true
+        verify: true
+    workload: medium
+    perspective:
+      name: Kha
+      role: Mandor desa pekerja
+      fictional: true
+
+  - id: m4-lereng-sempurna
+    type: action
+    title: Lereng Sempurna
+    summary: >-
+      Panjat area konstruksi Piramida Agung dan tentukan kemiringan (seked)
+      di tiga gerbang ukur.
+    place: Giza
+    years:
+      - start: -2560
+        approximate: true
+    workload: medium
+    perspective:
+      name: Hemiunu
+      role: Wazir dan (menurut tradisi) arsitek Piramida Agung
+      fictional: false
+
+  - id: m5-suara-dari-batu
+    type: cipher-puzzle
+    title: Suara dari Batu
+    summary: >-
+      Dari sinode para imam di Memphis, melompat ke Paris 1822: pecahkan sandi
+      Batu Rosetta seperti Champollion.
+    place: Memphis dan Paris
+    years:
+      - start: -196
+      - start: 1822
+    workload: heavy
+    perspective:
+      name: Jean-François Champollion
+      role: Peneliti hieroglif
+      fictional: false
+
+  - id: m6-pelayaran-ke-punt
+    type: resource-management
+    title: Pelayaran ke Punt
+    summary: >-
+      Siapkan ekspedisi dagang masa Ratu Hatshepsut: pilih muatan, hitung
+      nilainya dalam deben, lalu pulang membawa harta Punt.
+    place: Laut Merah dan Punt
+    years:
+      - start: -1470
+        approximate: true
+        verify: true
+    workload: heavy
+    perspective:
+      name: Nehesy
+      role: Pemimpin ekspedisi ke Punt
+      fictional: false
+
+exam:
+  id: m7-timbangan-maat
+  type: boss
+  title: Timbangan Ma'at
+  summary: >-
+    Perbaiki adegan yang dirusak Pengacau Waktu, lalu timbang kebenaran fakta
+    melawan bulu Ma'at.
+  place: Aula Ma'at
+  years: []
+  workload: medium
+  perspective:
+    name: Penjelajah Waktu
+    role: Tokoh bingkai
+    fictional: false

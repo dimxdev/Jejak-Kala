@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Lorong Waktu</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1f55"/><stop offset="1" stop-color="#0c071c"/></linearGradient>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64"><stop offset="0.140625" stop-color="#ffe39a"/><stop offset="0.5" stop-color="#f4c24e"/><stop offset="0.859375" stop-color="#e29a1e"/></linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#62e6ff" stop-opacity=".5"/><stop offset="1" stop-color="#62e6ff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <ellipse cx="32" cy="32" rx="26" ry="30" fill="url(#glow)"/>
+  <g fill="#1a1033" stroke="#1a1033" stroke-width="3" stroke-linejoin="round"><polygon points="19,15 45,15 45,21 34.5,31 34.5,33 45,43 45,49 19,49 19,43 29.5,33 29.5,31 19,21"/><rect x="15" y="9" width="34" height="6.5" rx="2"/><rect x="15" y="48.5" width="34" height="6.5" rx="2"/></g>
+  <g fill="url(#gold)"><polygon points="19,15 45,15 45,21 34.5,31 34.5,33 45,43 45,49 19,49 19,43 29.5,33 29.5,31 19,21"/><rect x="15" y="9" width="34" height="6.5" rx="2"/><rect x="15" y="48.5" width="34" height="6.5" rx="2"/></g>
+  <g fill="#62e6ff"><rect x="31.2" y="31" width="1.6" height="13"/><polygon points="24,49 40,49 32,41.5"/></g>
+</svg>

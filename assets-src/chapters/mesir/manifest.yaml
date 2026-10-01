@@ -1,0 +1,332 @@
+# Assets of chapter Mesir. Prompts are built from assets-src/style/style.yaml:
+#   bun run assets:prompt mesir <id>
+# status: todo -> generated (downloaded, not reviewed) -> approved (reviewed, shipped via assets:build)
+# `chat` is the Gemini chat that holds the character/scene a follow-up continues from.
+
+chapter: mesir
+assets:
+  # ---- reused from the style test (style A, approved by the owner on 2026-10-01) ----
+  - id: banner
+    kind: banner
+    status: approved
+    file: style-test/a-flat/raw/banner.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Scene: a wide establishing illustration for a game chapter called Ancient Egypt:
+      the Great Pyramids of Giza at golden hour, the Nile river with a traditional sailing boat,
+      date palms and reeds in the foreground, soft haze in the distance.
+
+  - id: m1-bg-akhet
+    kind: background
+    status: approved
+    file: style-test/a-flat/raw/mission-bg.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Scene: a background for a farming mission on the bank of the Nile during the annual flood:
+      shallow floodwater spreading across the fields between low mud-brick embankments,
+      irrigation channels, date palms, reeds, an ibis, a mud-brick village in the distance,
+      a calm morning sky.
+
+  - id: meryt-neutral
+    kind: portrait
+    status: approved
+    file: style-test/a-flat/raw/portrait-neutral.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Subject: a character portrait of Meryt, an ancient Egyptian woman farmer around 30 years old,
+      warm brown skin, shoulder-length dark hair with a simple linen headband, white linen dress
+      with a simple beaded collar, calm friendly expression, body turned slightly to the left,
+      bust framing, plain soft cream background with a faint warm gradient.
+
+  - id: meryt-worried
+    kind: portrait
+    followUp: true
+    status: approved
+    file: style-test/a-flat/raw/portrait-worried.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same character Meryt, in exactly the same style, outfit, framing, colours and background as
+      the previous portrait, but now with a worried expression: eyebrows raised and drawn together,
+      a slight frown, eyes glancing up and to the left with concern.
+
+  - id: rhind-papyrus
+    kind: icon
+    aspect: '9:16'
+    status: approved
+    file: style-test/a-flat/raw/artifact-icon.jpeg
+    subject: >-
+      Subject: a game item icon of the Rhind Mathematical Papyrus, an ancient Egyptian papyrus scroll
+      partly unrolled, with neat columns of abstract hieratic-style marks (not real writing),
+      a few tiny geometric diagrams of triangles and rectangles, and a reed pen resting beside it.
+
+  - id: hemiunu-walk
+    kind: sprite
+    status: approved
+    file: style-test/a-flat/raw/walk-pose.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Subject: a full-body character sprite for a 2D platformer game: Hemiunu, an ancient Egyptian
+      official and architect, middle-aged, wearing a white linen kilt, a broad beaded collar and
+      a short black wig, carrying a rolled plan under one arm, in a side view facing right,
+      in a mid-stride walking pose with both feet visible.
+
+  - id: hemiunu-jump
+    kind: sprite
+    followUp: true
+    status: approved
+    file: style-test/a-flat/raw/jump-pose.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same character Hemiunu, in exactly the same style, outfit, proportions and colours as the
+      previous sprite, but now in a jumping pose: side view facing right, both knees bent and feet
+      off the ground, one arm raised, the rolled plan still under the other arm. The same perfectly
+      flat solid pure magenta (#FF00FF) background, no ground, no shadow.
+
+  # ---- new: mission 1 (Banjir Nil) and its Kodeks entries ----
+  - id: m1-bg-peret
+    kind: background
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/m1-bg-peret.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same scene as the flooded-farmland background you created earlier in this conversation
+      (fields between low mud-brick embankments with irrigation channels, date palms, an ibis and a
+      mud-brick village in the distance): the same camera angle, composition, style and colours, but
+      now in the season of Peret: the floodwater has drained away, the soil is dark and fresh, rows
+      of young bright-green crops are growing, the sky is clear. Keep the lower third of the image
+      simple and uncluttered so game interface elements can sit on top of it. No people.
+
+  - id: m1-bg-shemu
+    kind: background
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/m1-bg-shemu.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same scene as the flooded-farmland background you created earlier in this conversation
+      (fields between low mud-brick embankments with irrigation channels, date palms, an ibis and a
+      mud-brick village in the distance): the same camera angle, composition, style and colours, but
+      now in the season of Shemu, the harvest: the fields are golden with ripe grain, the channels
+      are dry and sandy, the light is warm and dry, a few woven baskets and sheaves of grain stand at
+      the edges of the fields. Keep the lower third of the image simple and uncluttered so game
+      interface elements can sit on top of it. No people.
+
+  - id: meryt-happy
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/meryt-happy.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same character Meryt, in exactly the same style, outfit, framing, colours and background as
+      the previous portraits, but now smiling warmly, with bright, relieved and proud eyes.
+
+  - id: scribe-neutral
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/scribe-neutral.jpeg
+    chat: d19545c0034e35b9
+    note: >-
+      First try drew a hand with a scribe's palette floating under the bust. Redone without hands:
+      the reed pen is tucked behind the ear.
+    subject: >-
+      A different character in exactly the same style, framing, colours and background as the
+      previous portraits: an ancient Egyptian royal scribe, a man around 45 years old with warm brown
+      skin, a short black wig, a simple beaded collar and a reed pen tucked behind his ear, an
+      attentive, serious but fair expression, body turned slightly to the right, bust framing only
+      (head, neck and shoulders, nothing below the bust, no hands, no objects), plain soft cream
+      background with a faint warm gradient.
+
+  - id: nilometer
+    kind: illustration
+    status: approved
+    file: chapters/mesir/raw/nilometer.jpeg
+    chat: 7272e608be09af27
+    subject: >-
+      Subject: an ancient Egyptian Nilometer drawn as a cutaway side view: a stone stairwell
+      descending into the Nile, a tall stone measuring column beside the stairs with evenly spaced
+      horizontal notches, the river water rising along the column, a mud-brick wall and palm fronds
+      at the top. No numerals. Plain soft cream background.
+
+  - id: icon-grain
+    kind: icon
+    status: approved
+    file: chapters/mesir/raw/icon-grain.jpeg
+    chat: 7272e608be09af27
+    subject: >-
+      Subject: a game item icon of a woven reed basket full of golden wheat grain, with a few ears
+      of wheat leaning against it.
+
+  - id: codex-sopdet
+    kind: illustration
+    aspect: '16:9'
+    status: approved
+    file: chapters/mesir/raw/codex-sopdet.jpeg
+    chat: 7272e608be09af27
+    subject: >-
+      Scene: the sky just before dawn over the Nile: the bright star Sirius shining low above the
+      eastern horizon, a hint of peach dawn light, the calm river reflecting the star, a small
+      mud-brick village and date palms in silhouette. A deep teal-indigo sky fading to warm peach
+      near the horizon.
+
+  # ---- mission 2 (Tali Para Penyurvei) ----
+  - id: m2-bg-field
+    kind: background
+    status: approved
+    file: chapters/mesir/raw/m2-bg-field.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Scene: a background for a land surveying mission in the Nile valley just after the annual
+      flood has drained away: a wide flat plain of smooth, damp, dark mud with a few wooden stakes
+      and a coil of knotted rope lying on the ground, thin irrigation channels, a row of date palms
+      and a mud-brick village on the horizon, a soft clear morning sky.
+
+  - id: senu-neutral
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/senu-neutral.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      A different character in exactly the same style, framing, colours and background as the
+      previous portraits: Senu, an ancient Egyptian land surveyor and rope-stretcher around 35 years
+      old, warm brown skin, short black hair, a simple white linen collar and a coil of knotted rope
+      resting on one shoulder, a focused and friendly expression, body turned slightly to the right,
+      bust framing only (head, neck and shoulders, nothing below the bust, no hands), plain soft
+      cream background with a faint warm gradient.
+
+  - id: senu-happy
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/senu-happy.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same character Senu, in exactly the same style, outfit, framing, colours and background as
+      the previous portrait, but now with a broad, proud smile and bright eyes.
+
+  - id: icon-rope
+    kind: icon
+    status: approved
+    file: chapters/mesir/raw/icon-rope.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    note: >-
+      First try drew a pencil and a teal spring with orange beads. Redone with the rope and the stake
+      described by material and shape.
+    subject: >-
+      Subject: a game item icon of a neat coil of thick natural tan hemp rope, twisted like real
+      rope, with five simple overhand knots at even distances along it, and beside it a short rough
+      wooden surveying stake (a thick peg with a pointed end, like a tent peg, not a pencil)
+      standing in the ground.
+
+  # The Kodeks entry "tiga-musim" needs no extra illustration: the app shows the three season
+  # backgrounds above (m1-bg-akhet, m1-bg-peret, m1-bg-shemu) side by side.
+
+  # ---- mission 4: Lereng Sempurna (a platformer on the Great Pyramid's building site) ----
+  - id: hemiunu-neutral
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/hemiunu-neutral.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      A different character in exactly the same style, framing, colours and background as the
+      previous portraits: Hemiunu, an ancient Egyptian vizier and royal architect around 45 years
+      old, warm brown skin, a short black wig, a broad beaded collar over a white linen garment,
+      a composed, thoughtful and slightly stern expression, body turned slightly to the left, bust
+      framing only (head, neck and shoulders, nothing below the bust, no hands), plain soft cream
+      background with a faint warm gradient.
+
+  - id: hemiunu-happy
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/mesir/raw/hemiunu-happy.jpeg
+    chat: d19545c0034e35b9
+    subject: >-
+      Same character Hemiunu, in exactly the same style, outfit, framing, colours and background as
+      the previous portrait, but now with a warm, proud smile and bright eyes.
+
+  - id: m4-bg-giza
+    kind: background
+    status: approved
+    file: chapters/mesir/raw/m4-bg-giza.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Scene: a background for a platformer mission on the building site of the Great Pyramid at
+      Giza: the huge pyramid in the middle distance, smooth pale casing stones covering its lower
+      half and rough stepped blocks still showing near the top, long construction ramps of mud
+      brick and rubble leaning against its sides, wooden scaffolding and coiled ropes, a few palm
+      trees and the low mud-brick workers' village on the plain far below, golden morning light,
+      a soft clear sky with thin clouds.
+
+  - id: scorpion
+    kind: sprite
+    aspect: '4:3'
+    status: approved
+    file: chapters/mesir/raw/scorpion.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Subject: a game sprite of a desert scorpion in side view facing right, sandy tan body with
+      darker terracotta claws and a curved tail raised over its back with a small stinger, eight
+      legs, simple friendly flat shapes, the whole animal visible with space around it.
+
+  - id: swing-block
+    kind: sprite
+    aspect: '1:1'
+    status: approved
+    file: chapters/mesir/raw/swing-block.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Subject: a game sprite of a rough-hewn square limestone block in front view with chisel
+      marks, a thick twisted rope tied around it and a short rope loop sticking out of the top
+      centre where it hangs from, the whole block visible with space around it.
+
+  - id: gate
+    kind: sprite
+    status: approved
+    file: chapters/mesir/raw/gate.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Subject: a game sprite of a small freestanding ancient Egyptian stone gateway in front view:
+      two square stone pillars with a flat stone lintel across the top, simple evenly spaced
+      horizontal measuring notches carved along both pillars (marks only, no letters), an iron-free
+      wooden peg on each pillar to tie a rope to, and an empty opening between the pillars that
+      shows the same flat background colour, the whole gateway visible with space around it.
+
+  - id: rod
+    kind: sprite
+    aspect: '16:9'
+    status: approved
+    file: chapters/mesir/raw/rod.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Subject: a game sprite of a golden ancient Egyptian royal cubit measuring rod: a straight
+      slim rectangular bar lying at a gentle diagonal, divided into seven equal sections by thin
+      lines with four tiny notches in each section (marks only, no letters), polished gold with a
+      darker gold edge, two or three small sparkles beside it, the whole rod visible with space
+      around it.
+
+  - id: capstone
+    kind: sprite
+    aspect: '1:1'
+    status: approved
+    file: chapters/mesir/raw/capstone.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Subject: a game sprite of a pyramidion, the small pyramid-shaped capstone of an Egyptian
+      pyramid, in front view: smooth pale limestone sides with a gleaming gold-plated tip, resting
+      on a short square stone base, the whole object visible with space around it.
+
+  - id: codex-piramida
+    kind: illustration
+    status: approved
+    file: chapters/mesir/raw/codex-piramida.jpeg
+    chat: 2e5e0a5cd7cc6d3c
+    subject: >-
+      Scene: an illustration of the Great Pyramid of Giza as it looked when it was new: smooth
+      bright white limestone casing and a gold-tipped capstone, standing on the Giza plateau in
+      warm morning light, two smaller pyramids behind it and a long stone causeway leading to it,
+      a few palm trees, desert sand in the foreground.

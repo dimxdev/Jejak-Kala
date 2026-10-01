@@ -1,0 +1,83 @@
+# The locked art direction: style A "datar (buku cerita)" (docs/adr/0005-arah-seni-gaya-a.md).
+# tools/assets/style.ts builds every Gemini prompt from this file, so all assets share one look:
+#   prompt = core + negative + subject (+ kind extra) (+ sprite background)
+# Change the look here, in one place. Human-readable rules: docs/art/style-bible.md.
+
+id: a-flat
+name: Datar (buku cerita)
+
+# {landscape} becomes "soft gradients only in the sky, " for landscape kinds and "" otherwise.
+core: >-
+  Style: modern flat storybook illustration for a history game for all ages including adults:
+  clean geometric shapes, a limited warm palette (ochre, terracotta, teal, cream),
+  subtle paper-grain texture, {landscape}thin outlines in a darker shade of each shape's own colour.
+
+negatives:
+  scene: No text, no letters, no watermark, no people.
+  figure: No text, no letters, no watermark.
+
+sprite_background: >-
+  The background is a perfectly flat solid pure magenta (#FF00FF) colour,
+  with no ground, no shadow and no gradient.
+
+# What a kind means: the aspect ratio to select in Gemini, which negative clause applies,
+# optional closing sentence, and how the processed file is made (tools/assets/pipeline.ts).
+kinds:
+  banner:
+    aspect: '16:9'
+    negative: scene
+    landscape: true
+    output: { type: fit, width: 1600, height: 900, quality: 80 }
+  background:
+    aspect: '16:9'
+    negative: scene
+    landscape: true
+    extra: >-
+      Keep the lower third of the image simple and uncluttered so game interface elements
+      can sit on top of it.
+    output: { type: fit, width: 1600, height: 900, quality: 80 }
+  # portraits, icons and illustrations are drawn on cream paper: `fade` softens their edges to
+  # transparent so they sit on the page without a visible rectangle (tools/assets/pipeline.ts)
+  portrait:
+    aspect: '3:4'
+    negative: figure
+    output: { type: fit, width: 900, height: 1200, quality: 82, fade: 0.07 }
+  icon:
+    aspect: '1:1'
+    negative: figure
+    extra: Centered, plain soft cream background, a soft shadow under the object.
+    output: { type: fit, width: 512, height: 512, quality: 85, fade: 0.06 }
+  sprite:
+    aspect: '3:4'
+    negative: figure
+    output: { type: sprite, height: 512, width: 512, quality: 85 }
+  illustration:
+    aspect: '3:4'
+    negative: scene
+    landscape: true
+    output: { type: fit, width: 1200, height: 1200, quality: 80, fade: 0.05 }
+  map:
+    aspect: '4:3'
+    negative: scene
+    landscape: false
+    output: { type: fit, width: 1600, height: 1200, quality: 80 }
+  reference:
+    # character design sheets and line-ups: used only to keep later images consistent, never shipped
+    aspect: '16:9'
+    negative: figure
+    output: { type: none }
+
+# Palette per era. Mesir was measured from the style test images (k-means after removing the
+# cream paper). Other eras are filled in when their map is planned.
+palettes:
+  mesir:
+    paper: '#fef1db'
+    sand: '#e4bc93'
+    ochre: '#df9f5a'
+    terracotta: '#bd7542'
+    clay: '#c08d69'
+    umber: '#895933'
+    nile: '#769e92'
+    nile-deep: '#537d76'
+    reed: '#a1bca7'
+    ink: '#2b393b'

@@ -1,0 +1,208 @@
+# M1. Tahun Pertama: Banjir Nil. Rencana: docs/plan-mesir.md. Skema: src/core/missions/schema.ts
+# dan src/core/missions/nile-flood/schema.ts. Aturan permainannya: src/core/missions/nile-flood/model.ts.
+#
+# Angka di `params` adalah MODEL BUATAN GAME, bukan data zaman piramida. Pemain diberi tahu itu di
+# dialog pembuka dan di Kodeks (entri "Nilometer"). Skala 12 sampai 18 hasta terinspirasi catatan
+# Pliny (abad ke-1 M): 12 = paceklik, 16 = sukacita.
+
+id: m1-banjir-nil
+engine: nile-flood
+
+codex: [tiga-musim, nilometer, hasta]
+bonusCodex: [kalender-sipil, sopdet, siklus-sothis]
+
+# ---- sebelum misi ----
+intro:
+  background: mesir/codex-sopdet
+  lines:
+    - who: kala
+      mood: thinking
+      text: >-
+        Kita tiba di tepi Sungai Nil, sekitar 4.500 tahun yang lalu. Lihat bintang terang yang rendah
+        di timur itu?
+    - who: kala
+      text: >-
+        Namanya Sopdet. Orang Mesir menunggu kemunculannya sebelum fajar, karena itu pertanda banjir
+        Nil sebentar lagi tiba.
+    - who: meryt
+      text: >-
+        Kamu pasti penjelajah yang diceritakan Kala. Aku Meryt. Keluargaku bertani di tepi sungai, dan
+        sepanjang tahun kami bergantung pada satu hal: seberapa tinggi air naik.
+    - who: meryt
+      mood: worried
+      text: >-
+        Kalau banjir terlalu rendah, ladang yang tinggi tidak terairi. Kalau terlalu besar, tanggul
+        jebol. Dan juru tulis akan datang menagih pajak, apa pun hasil panenku.
+    - who: kala
+      text: >-
+        Bantu Meryt menjalani satu tahun penuh: tiga musim, tiga keputusan. Hitungannya model
+        sederhana buatan game, tetapi terinspirasi cara orang Mesir sungguh hidup bersama sungai.
+
+# ---- adegan di dalam misi ----
+scenes:
+  akhet:
+    background: mesir/m1-bg-akhet
+    lines:
+      - who: meryt
+        text: >-
+          Sopdet sudah terbit, dan banjir tiba! Ayo ke Nilometer di tepi sungai. Tiang batu itu
+          bertanda hasta.
+      - who: kala
+        mood: thinking
+        text: >-
+          Lihat di tanda mana permukaan air berhenti. Satu hasta kira-kira sepanjang lengan, dari siku
+          sampai ujung jari tengah.
+  peret:
+    background: mesir/m1-bg-peret
+    lines:
+      - who: meryt
+        text: >-
+          Airnya sudah surut dan tanah hitam yang subur muncul. Saatnya menanam! Aku menyimpan 12
+          keranjang benih.
+      - who: meryt
+        mood: worried
+        text: >-
+          Ladang yang rendah paling subur, tetapi ladang yang tinggi baru basah kalau banjirnya besar.
+          Dengan menggali saluran, air naik satu hasta lebih tinggi di satu ladang. Hanya saja
+          pekerjanya harus dibayar roti dan bir.
+      - who: kala
+        text: >-
+          Tanam di ladang yang terairi. Benih yang jatuh di tanah kering tidak akan tumbuh.
+  shemu:
+    background: mesir/m1-bg-shemu
+    lines:
+      - who: meryt
+        mood: happy
+        text: Musim panen! Lihat ladang yang menguning itu.
+      - who: juru-tulis
+        text: >-
+          Aku sudah mencatat tinggi banjir dari Nilometer. Pajak ditetapkan dari angka itu, bukan dari
+          apa yang tumbuh di ladangmu.
+
+# ---- sesudah misi, menurut jumlah bintang ----
+outro:
+  three:
+    background: mesir/m1-bg-shemu
+    lines:
+      - who: kala
+        mood: happy
+        text: >-
+          Panen besar, pajak lunas, lumbung penuh! Kamu memakai setiap hasta banjir dan setiap hari
+          kerja dengan cerdik.
+      - who: meryt
+        mood: happy
+        text: Terima kasih, penjelajah. Keluargaku aman sepanjang tahun ini.
+  two:
+    background: mesir/m1-bg-shemu
+    lines:
+      - who: meryt
+        mood: happy
+        text: Kita selamat, pajak terbayar, dan keluargaku kenyang. Terima kasih!
+      - who: kala
+        text: >-
+          Masih ada ruang untuk lebih baik. Bandingkan rencanamu dengan rencana terbaik di bawah ini.
+  one:
+    background: mesir/m1-bg-shemu
+    lines:
+      - who: meryt
+        mood: worried
+        text: Tahun yang berat. Tetapi kita masih bertahan.
+      - who: kala
+        mood: thinking
+        text: >-
+          Coba lagi dan mulai dari ladang yang pasti terairi. Perhatikan angka hasta di tiap ladang
+          dan bandingkan dengan tinggi banjir.
+
+# ---- bonus: kalender yang melenceng ----
+bonusQuiz:
+  title: Kalender yang melenceng
+  intro: >-
+    Di akhir musim panen, Kala bertanya: kenapa festival banjir kadang jatuh di musim yang salah?
+    Jawab dua dari tiga pertanyaan untuk membuka tiga entri Kodeks.
+  passAt: 2
+  questions:
+    - question: Berapa hari dalam satu tahun kalender sipil Mesir?
+      options: ['360 hari', '365 hari', '365¼ hari', '366 hari']
+      answer: 1
+      explanation: >-
+        Kalender sipil punya 12 bulan x 30 hari = 360 hari, ditambah 5 hari tambahan. Jadi tepat 365
+        hari, tanpa hari kabisat.
+    - question: >-
+        Satu tahun matahari kira-kira 365¼ hari. Berapa hari kalender sipil tertinggal setiap 4 tahun?
+      options: ['1 hari', '4 hari', '5 hari', 'Tidak tertinggal']
+      answer: 0
+      explanation: >-
+        Selisihnya ¼ hari per tahun, dan 4 x ¼ = 1. Jadi tiap empat tahun kalender tertinggal satu hari
+        dari matahari.
+    - question: >-
+        Kalender tertinggal 1 hari setiap 4 tahun. Setelah berapa tahun ia tertinggal satu tahun penuh
+        (365 hari) dan kembali cocok dengan kemunculan Sopdet?
+      options: ['365 tahun', '1.095 tahun', '1.460 tahun', '4.000 tahun']
+      answer: 2
+      explanation: >-
+        365 hari x 4 tahun = 1.460 tahun. Rentang itu disebut siklus Sothis. Para ahli masih
+        memperdebatkan seberapa jauh orang Mesir sendiri memakainya.
+
+# ---- angka permainan (bisa diubah tanpa menyentuh kode) ----
+params:
+  plots:
+    - id: tepi-sungai
+      name: Tepi sungai
+      note: Paling subur dan paling dulu terairi, tetapi pertama yang hanyut kalau tanggul jebol.
+      needs: 12
+      yield: 6
+    - id: lahan-rendah
+      name: Lahan rendah
+      note: Subur dan cepat terairi.
+      needs: 13
+      yield: 6
+    - id: lahan-tengah
+      name: Lahan tengah
+      note: Hasil sedang, terairi bila banjir cukup.
+      needs: 14
+      yield: 5
+    - id: dekat-desa
+      name: Dekat desa
+      note: Hasil sedang, butuh banjir yang lumayan besar.
+      needs: 15
+      yield: 5
+    - id: lahan-tinggi
+      name: Lahan tinggi
+      note: Aman dari tanggul jebol, tetapi hasilnya lebih sedikit.
+      needs: 16
+      yield: 4
+    - id: lereng-gurun
+      name: Lereng gurun
+      note: Hanya basah kalau banjir sangat besar.
+      needs: 17
+      yield: 4
+
+  floodRange: { min: 12, max: 18 }
+  floodWeights: [1, 2, 3, 4, 3, 2, 1]
+  relaxedFlood: 14
+  overflood: { from: 18, washedOut: 2 }
+  floodMoods:
+    - { upTo: 12, label: Paceklik }
+    - { upTo: 13, label: Kurang }
+    - { upTo: 14, label: Lumayan }
+    - { upTo: 15, label: Cukup }
+    - { upTo: 16, label: Berlimpah }
+    - { upTo: 17, label: Terlalu besar }
+    - { upTo: 18, label: Bencana }
+
+  seedBaskets: 12
+  maxSeedsPerPlot: 3
+  laborDays: 2
+  maxLaborPerPlot: 1
+  laborCost: 1
+  familyNeed: 20
+
+  assessedPerPlot: 12
+  taxBrackets:
+    - { upTo: 12, fraction: [0, 1] }
+    - { upTo: 13, fraction: [1, 6] }
+    - { upTo: 16, fraction: [1, 4] }
+    - { upTo: 17, fraction: [1, 3] }
+    - { upTo: 18, fraction: [1, 6] }
+
+  stars: { three: 0.9, two: 0.6 }

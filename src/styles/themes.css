@@ -1,0 +1,32 @@
+/*
+ * Colour tokens. Every screen reads these variables, and a chapter overrides them with
+ * data-theme="<chapter.theme>" (the value comes from content/chapters/<id>/chapter.yaml).
+ *
+ * The look is "paper": the pictures are flat storybook illustrations drawn on cream, so the app is a
+ * cream page with dark ink. The palette is measured from the Mesir pictures (assets-src/style/style.yaml).
+ * tests/unit/theme-contrast.test.ts keeps the text colours readable (WCAG AA).
+ */
+
+:root {
+  --canvas: #f4e6cb; /* the page */
+  --panel: #fff6e6; /* cards: the colour the portraits are drawn on */
+  --panel-2: #fbebd0; /* quieter surfaces inside cards */
+  --line: #dcc49a; /* borders and rules */
+  --fg: #2b393b; /* ink */
+  --muted: #62625a; /* secondary text */
+  --accent: #895933; /* buttons, links, highlights (umber) */
+  --accent-soft: #bd7542; /* bars and decoration only: too light for small text */
+  --on-accent: #fff6e6;
+  --good: #35625b; /* success, water (Nile deep) */
+  --good-soft: #d9eadf;
+  --bad: #9a3f2c; /* mistakes, hunger (brick) */
+  --bad-soft: #f3d3c6;
+  --water: #769e92;
+  --sand: #e4bc93; /* stone, sand: drawn scenery (Nilometer, fields) */
+  --umber: #895933;
+}
+
+[data-theme="mesir"] {
+  --accent: #895933;
+  --accent-soft: #bd7542;
+}

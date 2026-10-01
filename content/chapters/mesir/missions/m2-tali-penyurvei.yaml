@@ -1,0 +1,145 @@
+# M2. Tali Para Penyurvei. Rencana: docs/plan-mesir.md. Skema: src/core/missions/schema.ts dan
+# src/core/missions/rope-survey/schema.ts. Aturannya: src/core/missions/rope-survey/model.ts.
+#
+# Soal luas segitiga dan lingkaran adalah soal asli Papirus Rhind (nomor 51 dan 50). "Tali 12 simpul
+# dan segitiga 3-4-5" adalah ALAT BERMAIN: para ahli memperdebatkan apakah orang Mesir sungguh
+# memakainya, dan dialog serta Kodeks mengatakannya (entri "tali-12-simpul", label Perdebatan).
+
+id: m2-tali-penyurvei
+engine: rope-survey
+
+codex: [harpedonaptai, setat, tali-12-simpul, papirus-rhind, luas-segitiga-mesir]
+# tantangan lingkaran (bintang ke-3)
+bonusCodex: [luas-lingkaran-mesir]
+
+intro:
+  background: mesir/m2-bg-field
+  lines:
+    - who: kala
+      mood: thinking
+      text: >-
+        Kita melompat ke masa Kerajaan Tengah, sekitar 1850 SM. Banjir baru saja surut dan ladang di
+        depan kita rata tertutup lumpur.
+    - who: senu
+      text: >-
+        Salam, penjelajah. Aku Senu, penegang tali. Tiap kali Nil surut, patok batas ladang ikut
+        hanyut, dan para tetangga mulai berdebat: "Ini tanahku!" "Bukan, itu tanahku!"
+    - who: senu
+      text: >-
+        Tugasku memulihkan batas-batas itu dengan tali dan patok. Dua patok masih berdiri, yaitu A
+        dan B. Sisanya harus kita pasang lagi, lalu kita hitung luasnya untuk juru tulis pajak.
+    - who: kala
+      text: >-
+        Pekerjaan penegang tali tercatat selama lebih dari 3.000 tahun di Mesir. Soal-soal hitungan
+        mereka bahkan tersimpan dalam Papirus Rhind, dan dua di antaranya akan kamu pecahkan.
+    - who: kala
+      mood: thinking
+      text: >-
+        Satu catatan jujur: tali 12 simpul yang dipakai di sini adalah alat bermain. Para ahli masih
+        berdebat apakah orang Mesir sungguh memakainya untuk membuat sudut siku.
+
+scenes:
+  rope:
+    background: mesir/m2-bg-field
+    lines:
+      - who: senu
+        text: >-
+          Aku membawa tali dengan 12 simpul berjarak sama. Kita bentangkan menjadi segitiga A, B, C.
+          Pasang patok C supaya sudut di A siku-siku dan ke-12 simpul terpakai tepat.
+      - who: kala
+        mood: thinking
+        text: >-
+          Sentuh sebuah titik pada petak untuk memasang patok, lalu periksa. Angka di tali
+          menunjukkan panjang tiap sisi, dihitung dalam ruas (satu ruas sama dengan satu khet).
+  area:
+    background: mesir/m2-bg-field
+    lines:
+      - who: senu
+        mood: happy
+        text: >-
+          Batas petak sudah pulih, dan sudutnya siku! Sekarang juru tulis pajak pasti bertanya: berapa
+          setat luasnya?
+      - who: kala
+        text: >-
+          Setat adalah satu petak berukuran 1 khet kali 1 khet. Satu khet kira-kira 52,5 meter, jadi
+          satu setat sekitar 2.756 meter persegi.
+  triangle:
+    background: mesir/m2-bg-field
+    lines:
+      - who: senu
+        text: >-
+          Ada lagi sepetak ladang berbentuk segitiga di dekat saluran. Soal seperti ini ada di Papirus
+          Rhind, nomor 51: alasnya 4 khet dan tingginya 10 khet.
+  circle:
+    background: mesir/m2-bg-field
+    lines:
+      - who: kala
+        mood: happy
+        text: >-
+          Tantangan untuk bintang ketiga: ladang bundar berdiameter 9 khet. Juru tulis Mesir punya cara
+          cerdik di soal nomor 50: kurangi diameter dengan seperembilannya, lalu kuadratkan sisanya.
+      - who: senu
+        text: Tidak wajib, tetapi lumayan seru. Siap?
+
+outro:
+  three:
+    background: mesir/m2-bg-field
+    lines:
+      - who: senu
+        mood: happy
+        text: >-
+          Patok terpasang, luas terhitung, bahkan ladang bundar pun beres! Tidak ada lagi tetangga yang
+          bertengkar soal batas.
+      - who: kala
+        mood: happy
+        text: >-
+          Kamu menghitung luas lingkaran dengan cara juru tulis hampir 4.000 tahun lalu. Hasilnya cuma
+          selisih sekitar 0,6% dari rumus kita.
+  two:
+    background: mesir/m2-bg-field
+    lines:
+      - who: senu
+        mood: happy
+        text: Batas pulih dan luasnya benar. Kerja bagus, penjelajah!
+      - who: kala
+        text: >-
+          Masih ada ladang bundar untuk bintang ketiga, kalau kamu mau mengulang dan mencoba cara
+          Mesir mengukur lingkaran.
+  one:
+    background: mesir/m2-bg-field
+    lines:
+      - who: senu
+        text: >-
+          Batasnya sudah pulih, walau kita beberapa kali meleset. Itu wajar: juru ukur pun mengukur
+          berulang kali.
+      - who: kala
+        mood: thinking
+        text: >-
+          Coba lagi dengan lebih tenang: pasang patok dari sisi tali yang sudah pasti, lalu periksa
+          angka di tali sebelum menekan Periksa.
+
+params:
+  grid: { width: 6, height: 5 }
+  rope: { knots: 12, sides: [3, 4, 5] }
+  plot: { a: [1, 1], width: 4, height: 3 }
+  triangle: { base: 4, height: 10 }
+  circle: { diameter: 9 }
+  mistakesForTwoStars: 2
+  solutionAfter: 3
+  hints:
+    rope:
+      - Tali punya 12 simpul. Jumlah panjang ketiga sisi segitiga A, B, C harus tepat 12 ruas.
+      - Cari titik C yang membuat AC 3 ruas dan BC 5 ruas. Sisi AB sudah 4 ruas.
+      - Segitiga bersisi 3, 4, dan 5 ruas selalu bersudut siku di antara sisi 3 dan sisi 4, yaitu di A.
+    corner:
+      - "Petak ini persegi panjang: sisi yang berhadapan sama panjang."
+      - D sejajar dengan C di sebelah B, tepat 3 ruas di bawah B.
+    area:
+      - Satu setat adalah satu kotak (1 khet × 1 khet). Hitung ada berapa kotak di dalam petak.
+      - Luas persegi panjang adalah lebar × tinggi.
+    triangle:
+      - Segitiga ini separuh dari persegi panjang yang membingkainya (alas 4 × tinggi 10).
+      - Luas segitiga = ½ × alas × tinggi.
+    circle:
+      - "Cara Mesir: kurangi diameter dengan 1/9 dari diameter itu."
+      - "Kalikan sisanya dengan dirinya sendiri: itulah luas dalam setat."

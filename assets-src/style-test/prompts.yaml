@@ -1,0 +1,89 @@
+# Prompts of the art-style test (2026-10-01): Gemini Pro (3.1 Pro), tool "Buat gambar".
+# The prompt that was sent is:  <style.core> <subject.negative> <subject.text>
+# The aspect ratio is chosen in the Gemini UI, not written in the prompt.
+# Landscape prompts of style A also included "soft gradients only in the sky,".
+# Results: docs/art/style-test.md. Raw images: assets-src/style-test/<style>/raw/ (not committed).
+
+styles:
+  a-flat:
+    name: Datar (buku cerita)
+    core: >-
+      Style: modern flat storybook illustration for a history game for all ages including adults:
+      clean geometric shapes, a limited warm palette (ochre, terracotta, teal, cream),
+      subtle paper-grain texture, thin outlines in a darker shade of each shape's own colour.
+  b-gouache:
+    name: Gouache
+    core: >-
+      Style: hand-painted digital gouache illustration for a history game for all ages including adults:
+      soft visible brush strokes, rich matte pigment colours, warm golden-hour lighting,
+      slightly soft edges, painterly texture, storybook quality, a harmonious limited palette.
+  c-papercut:
+    name: Diorama kertas
+    core: >-
+      Style: layered paper-cut diorama illustration for a history game for all ages including adults:
+      the scene is built from stacked cut-paper layers with soft drop shadows between the layers
+      to create depth, subtle paper fibre texture, crisp clean cut edges, a warm limited palette.
+
+subjects:
+  banner:
+    aspect: '16:9'
+    negative: No text, no letters, no watermark, no people.
+    text: >-
+      Scene: a wide establishing illustration for a game chapter called Ancient Egypt:
+      the Great Pyramids of Giza at golden hour, the Nile river with a traditional sailing boat,
+      date palms and reeds in the foreground, soft haze in the distance.
+
+  mission-bg:
+    aspect: '16:9'
+    negative: No text, no letters, no watermark, no people.
+    text: >-
+      Scene: a background for a farming mission on the bank of the Nile during the annual flood:
+      shallow floodwater spreading across the fields between low mud-brick embankments,
+      irrigation channels, date palms, reeds, an ibis, a mud-brick village in the distance,
+      a calm morning sky. Keep the lower third of the image simple and uncluttered so game
+      interface elements can sit on top of it.
+
+  portrait-neutral:
+    aspect: '3:4'
+    negative: No text, no letters, no watermark.
+    text: >-
+      Subject: a character portrait of Meryt, an ancient Egyptian woman farmer around 30 years old,
+      warm brown skin, shoulder-length dark hair with a simple linen headband, white linen dress
+      with a simple beaded collar, calm friendly expression, body turned slightly to the left,
+      bust framing, plain soft cream background (style C: "cream paper background").
+
+  portrait-worried:
+    aspect: '3:4'
+    follow_up: true   # sent in the same chat as portrait-neutral so the character carries over
+    text: >-
+      Same character Meryt, in exactly the same style, outfit, framing, colours and background as
+      the previous portrait, but now with a worried expression: eyebrows raised and drawn together,
+      a slight frown, eyes glancing up and to the left with concern.
+
+  artifact-icon:
+    aspect: '3:4'     # style A was accidentally 9:16
+    negative: No text, no letters, no watermark.
+    text: >-
+      Subject: a game item icon of the Rhind Mathematical Papyrus, an ancient Egyptian papyrus scroll
+      partly unrolled, with neat columns of abstract hieratic-style marks (not real writing),
+      a few tiny geometric diagrams of triangles and rectangles, and a reed pen resting beside it.
+      Centered, plain soft cream background, a soft shadow under the object.
+
+  walk-pose:
+    aspect: '3:4'
+    negative: No text, no letters, no watermark.
+    text: >-
+      Subject: a full-body character sprite for a 2D platformer game: Hemiunu, an ancient Egyptian
+      official and architect, middle-aged, wearing a white linen kilt, a broad beaded collar and
+      a short black wig, carrying a rolled plan under one arm, in a side view facing right,
+      in a mid-stride walking pose with both feet visible. The background is a perfectly flat solid
+      pure magenta (#FF00FF) colour, with no ground, no shadow and no gradient.
+
+  jump-pose:
+    aspect: '3:4'
+    follow_up: true   # same chat as walk-pose
+    text: >-
+      Same character Hemiunu, in exactly the same style, outfit, proportions and colours as the
+      previous sprite, but now in a jumping pose: side view facing right, both knees bent and feet
+      off the ground, one arm raised, the rolled plan still under the other arm. The same perfectly
+      flat solid pure magenta (#FF00FF) background, no ground, no shadow.

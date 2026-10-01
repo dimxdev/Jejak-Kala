@@ -1,0 +1,1 @@
+export { WorldMapPage } from './WorldMapPage';

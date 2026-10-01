@@ -1,0 +1,45 @@
+# Tokoh yang berbicara di dialog. Skema: src/core/story/schema.ts.
+# `portraits` memetakan suasana hati (mood) ke gambar "<bab>/<id-aset>"; `neutral` wajib ada.
+# Dua pembicara khusus tidak perlu didaftarkan: `player` (penjelajah pilihan pemain) dan `narrator`.
+
+characters:
+  kala:
+    name: Kala
+    role: Roh waktu, pemandu penjelajah
+    fictional: true
+    portraits:
+      neutral: shared/kala-neutral
+      happy: shared/kala-happy
+      thinking: shared/kala-thinking
+
+  meryt:
+    name: Meryt
+    role: Petani tepi Nil
+    fictional: true
+    portraits:
+      neutral: mesir/meryt-neutral
+      worried: mesir/meryt-worried
+      happy: mesir/meryt-happy
+
+  senu:
+    name: Senu
+    role: Juru ukur (penegang tali)
+    fictional: true
+    portraits:
+      neutral: mesir/senu-neutral
+      happy: mesir/senu-happy
+
+  hemiunu:
+    name: Hemiunu
+    role: Wazir Raja Khufu, menurut tradisi arsitek Piramida Agung
+    fictional: false
+    portraits:
+      neutral: mesir/hemiunu-neutral
+      happy: mesir/hemiunu-happy
+
+  juru-tulis:
+    name: Juru tulis pajak
+    role: Pejabat pencatat hasil bumi
+    fictional: true
+    portraits:
+      neutral: mesir/scribe-neutral

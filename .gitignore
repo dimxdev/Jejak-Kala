@@ -1,0 +1,21 @@
+# dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# test output
+test-results/
+playwright-report/
+coverage/
+
+# local environment
+.env.local
+.env.*.local
+
+# raw generated art stays on disk (large); manifests and prompts are committed (see assets-src/README.md)
+assets-src/**/raw/
+assets-src/_inbox/
+
+# editor / OS
+.DS_Store
+Thumbs.db

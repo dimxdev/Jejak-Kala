@@ -1,0 +1,510 @@
+# Kodeks bab Mesir: entri yang terbuka saat misi diselesaikan (lihat `codex:` dan `bonusCodex:` di
+# berkas misi). Skema: src/core/codex/schema.ts. Kunci memakai bahasa Inggris, teks untuk pemain
+# memakai bahasa Indonesia.
+#
+# Label kredibilitas: proven = Terbukti, tradition = Menurut tradisi, debated = Perdebatan,
+# myth = Mitos, game = Model game (buatan game, bukan sejarah).
+# `verify: true` = ada fakta yang belum dicek ke sumber; `bun run content:check` mendaftarnya.
+#
+# Fakta dalam berkas ini dicek ke sumber pada 2026-10-01 (lihat `sources` di tiap entri).
+
+entries:
+  # ---- M1. Tahun Pertama: Banjir Nil ----
+  - id: tiga-musim
+    category: concept
+    title: Tiga musim Sungai Nil
+    credibility: proven
+    summary: >-
+      Tahun Mesir tidak dibagi menjadi musim hujan dan kemarau, tetapi mengikuti sungai: banjir, tumbuh,
+      panen.
+    images: [mesir/m1-bg-akhet, mesir/m1-bg-peret, mesir/m1-bg-shemu]
+    body:
+      - >-
+        Di Mesir hampir tidak pernah turun hujan. Yang mengatur hidup petani adalah Sungai Nil, jadi
+        orang Mesir membagi tahun menjadi tiga musim menurut apa yang terjadi di ladang.
+      - >-
+        Akhet adalah musim banjir: air Nil naik dan menggenangi lahan di kedua tepinya. Peret adalah
+        musim tumbuh: air surut, tanah hitam yang subur muncul kembali, lalu dibajak dan ditanami.
+        Shemu adalah musim panen, ketika air sungai rendah dan ladang menguning.
+      - >-
+        Tiap musim terdiri atas empat bulan, dan tiap bulan 30 hari, jadi satu musim tepat 120 hari.
+    deep:
+      - >-
+        Pembagian tiga musim ini melekat pada kalender sipil (lihat entri "Kalender sipil"). Karena
+        kalender itu tidak punya hari kabisat, ia bergeser terhadap musim yang sebenarnya, sehingga nama
+        musim lama-kelamaan tidak lagi cocok dengan keadaan di ladang.
+    sources:
+      - title: Egyptian calendar (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Egyptian_calendar
+        note: tiga musim, empat bulan per musim, struktur kalender
+    related: [kalender-sipil, nilometer]
+
+  - id: nilometer
+    category: artifact
+    title: Nilometer
+    credibility: proven
+    summary: Alat pengukur tinggi banjir Sungai Nil, dipakai untuk memperkirakan panen dan pajak.
+    images: [mesir/nilometer]
+    verify: true
+    body:
+      - >-
+        Nilometer mengukur tinggi air Sungai Nil. Bentuknya bisa tiang batu bertanda di tepi sungai,
+        tangga yang turun ke air, atau sumur yang terhubung ke sungai lewat saluran. Tinggi air
+        dibaca dalam hasta, telapak, dan jari.
+      - >-
+        Catatan tinggi banjir tahunan sudah muncul pada Batu Palermo, potongan arsip kerajaan dari
+        Kerajaan Lama. Itu masuk akal: tinggi banjir menentukan seberapa luas lahan yang terairi, jadi
+        juga seberapa besar panen yang bisa diharapkan tahun itu.
+      - >-
+        Salah satu Nilometer yang terkenal ada di Pulau Elephantine, dekat Aswan, di ujung selatan
+        Mesir tempat banjir tiba lebih dulu.
+      - >-
+        Di game ini kamu membaca Nilometer pada skala 12 sampai 18 hasta. Itu skala buatan game,
+        terinspirasi catatan Pliny, bukan data dari zaman piramida.
+    deep:
+      - >-
+        Bukti bahwa bacaan Nilometer dipakai untuk menetapkan pajak paling jelas berasal dari masa
+        yang jauh lebih muda: masa Ptolemaios, Romawi, dan Abbasiyah. Nilometer Pulau Roda di Kairo
+        dibangun pada 715 M dan dibangun ulang pada 861 M atas perintah Khalifah al-Mutawakkil. Untuk
+        Kerajaan Lama, kaitan antara tinggi banjir dan pajak masuk akal tetapi tidak sejelas itu
+        terdokumentasi.
+      - >-
+        Batu Palermo mencatat satu tahun pada masa Raja Djer dengan tinggi banjir 6 hasta 1 telapak.
+        Angka itu tidak bisa dibandingkan langsung dengan angka Pliny (12 sampai 16 hasta), kemungkinan
+        karena titik nol dan tempat pengukurannya berbeda. Tanggal pasti penyusunan Batu Palermo dan
+        penjelasan selisih ini masih perlu dicek ke sumber ahli.
+    sources:
+      - title: Nilometer (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Nilometer
+        note: jenis Nilometer, Elephantine, Pulau Roda, pemakaian untuk pajak
+      - title: Palermo Stone (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Palermo_Stone
+        note: catatan tinggi banjir tahunan dalam hasta, telapak, dan jari
+    related: [hasta, tiga-musim]
+
+  - id: hasta
+    category: concept
+    title: Hasta (kubit kerajaan)
+    credibility: proven
+    summary: Ukuran dasar panjang Mesir kuno, sepanjang lengan dari siku sampai ujung jari tengah.
+    body:
+      - >-
+        Hasta kerajaan adalah ukuran panjang baku di Mesir kuno, sekitar 52,3 sampai 52,5 sentimeter.
+        Satu hasta terdiri atas 7 telapak, dan satu telapak terdiri atas 4 jari, jadi 1 hasta sama
+        dengan 28 jari. Satu telapak kira-kira 7,5 cm dan satu jari kira-kira 1,9 cm.
+      - >-
+        Tongkat ukur hasta ditemukan di makam-makam dan kini disimpan di museum. Dengan hasta orang
+        mengukur segalanya: tinggi banjir, tinggi bangunan, dan panjang tali pengukur tanah (satu khet
+        adalah 100 hasta, kira-kira 52,5 meter).
+    deep:
+      - Panjang pastinya sedikit berbeda antar tongkat ukur dan antar zaman.
+    sources:
+      - title: Ancient Egyptian units of measurement (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Ancient_Egyptian_units_of_measurement
+        note: panjang hasta, telapak, jari, khet
+    related: [nilometer]
+
+  # ---- bonus M1: kalender melenceng ----
+  - id: kalender-sipil
+    category: concept
+    title: Kalender sipil
+    credibility: proven
+    summary: 365 hari tepat tanpa hari kabisat, sehingga perlahan bergeser dari musim yang sebenarnya.
+    body:
+      - >-
+        Kalender sipil Mesir punya tepat 365 hari: 12 bulan dengan 30 hari tiap bulan, ditambah 5 hari
+        tambahan di akhir tahun. Dua belas bulan itu dikelompokkan menjadi tiga musim: Akhet, Peret,
+        dan Shemu.
+      - >-
+        Masalahnya, satu tahun matahari sebenarnya kira-kira 365¼ hari, dan kalender ini tidak punya
+        hari kabisat. Akibatnya setiap empat tahun kalender tertinggal satu hari. Setelah puluhan
+        tahun, awal tahun sipil sudah jauh dari awal banjir yang sebenarnya, sehingga festival banjir
+        jatuh di musim yang salah.
+      - >-
+        Penguasa Ptolemaios III memerintahkan hari kabisat pada 238 SM (Dekret Kanopus), tetapi aturan
+        itu tidak dijalankan. Hari kabisat baru berlaku lewat pembaruan kalender di masa Augustus,
+        26 sampai 25 SM, dengan hari kabisat pertama pada 22 SM.
+    deep:
+      - >-
+        Pergeseran satu hari tiap empat tahun inilah yang melahirkan "siklus Sothis" (lihat entri itu).
+        Para sejarawan memakainya untuk membantu menghitung tanggal, tetapi caranya diperdebatkan.
+    sources:
+      - title: Egyptian calendar (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Egyptian_calendar
+        note: struktur 365 hari, tanpa kabisat, Dekret Kanopus, pembaruan Augustus
+    related: [sopdet, siklus-sothis, tiga-musim]
+
+  - id: sopdet
+    category: concept
+    title: Sopdet (Sirius)
+    credibility: proven
+    summary: Bintang yang kemunculannya sebelum fajar menjadi tanda bahwa banjir Nil akan datang.
+    images: [mesir/codex-sopdet]
+    body:
+      - >-
+        Sopdet, dalam bahasa Yunani Sothis, adalah nama Mesir untuk bintang Sirius, bintang paling
+        terang di langit malam. Setiap tahun Sirius menghilang lebih dari dua bulan karena tertutup
+        cahaya matahari.
+      - >-
+        Lalu, sebelum fajar, ia muncul kembali di ufuk timur. Peristiwa itu disebut kemunculan
+        heliakal. Di Mesir, saat itu kira-kira bertepatan dengan datangnya banjir Nil, sehingga Sopdet
+        dianggap pertanda banjir dan awal tahun baru. Perayaan tahun baru disebut Wepet Renpet,
+        "Pembukaan Tahun".
+      - Bintang itu juga dipuja sebagai dewi Sopdet.
+    deep:
+      - >-
+        Kalender sipil kemungkinan besar disusun dari pengamatan Sirius, yang munculnya sesuai dengan
+        awal rata-rata banjir. Hanya saja kalender itu tidak punya hari kabisat, jadi tahun barunya
+        pelan-pelan menjauh dari kemunculan Sirius.
+    sources:
+      - title: Egyptian calendar (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Egyptian_calendar
+        note: dasar kalender pada pengamatan Sirius
+      - title: Sothic cycle (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Sothic_cycle
+        note: nama Sopdet, kemunculan heliakal
+    related: [kalender-sipil, siklus-sothis]
+
+  - id: siklus-sothis
+    category: concept
+    title: Siklus Sothis
+    credibility: debated
+    summary: Rentang 1.460 tahun sebelum awal tahun sipil kembali berimpit dengan kemunculan Sirius.
+    years: [{ start: 139, approximate: false }]
+    body:
+      - >-
+        Kalender sipil kurang ¼ hari dari tahun matahari, sedangkan Sirius muncul kembali tiap
+        kira-kira 365¼ hari. Maka awal tahun sipil bergeser mundur sehari tiap empat tahun, dan baru
+        berimpit lagi dengan kemunculan Sirius setelah 1.460 tahun matahari (sama dengan 1.461 tahun
+        sipil). Rentang itu disebut siklus Sothis.
+      - >-
+        Catatan kuncinya datang dari penulis Romawi Censorinus. Dalam bukunya De Die Natale (238 M) ia
+        menyebut siklus yang baru dimulai seratus tahun sebelumnya, pada 139 M. Kemunculan Sirius pada
+        tahun itu dihitung jatuh pada 20 Juli menurut kalender Julian.
+    deep:
+      - >-
+        Para ahli Mesir kuno berhati-hati. Tidak ada naskah Mesir yang menyebut siklus ini secara
+        langsung, sehingga penanggalan yang bertumpu padanya hanyalah dugaan terdidik. Satu perubahan
+        kalender yang tidak tercatat saja dapat meruntuhkan seluruh kerangka kronologi yang dibangun
+        di atasnya.
+    sources:
+      - title: Sothic cycle (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Sothic_cycle
+        note: panjang siklus, catatan Censorinus, keberatan para ahli
+    related: [kalender-sipil, sopdet]
+
+  # ---- M2. Tali Para Penyurvei ----
+  - id: harpedonaptai
+    category: concept
+    title: Penegang tali (harpedonaptai)
+    credibility: proven
+    summary: Juru ukur Mesir yang memulihkan batas ladang dan meletakkan fondasi bangunan dengan tali bersimpul.
+    images: [mesir/icon-rope]
+    body:
+      - >-
+        Juru ukur Mesir disebut penegang tali. Mereka mengukur batas tanah dan fondasi bangunan dengan
+        tali bersimpul yang ditarik lurus sampai tidak melengkung. Orang Yunani menyebut mereka
+        harpedonaptai.
+      - >-
+        Pekerjaan ini tercatat selama lebih dari 3.000 tahun, dari masa awal dinasti sampai kerajaan
+        Ptolemaios. Meletakkan fondasi kuil lewat upacara "merentangkan tali" adalah peristiwa
+        khidmat, ketika raja dan pejabat tinggi ikut merentangkan tali.
+      - >-
+        Alat mereka adalah tali bersimpul dan bandul sipat (plumb bob), yang prinsipnya masih dipakai
+        juru ukur modern. Setelah banjir menghapus patok batas, merekalah yang memulihkan batas
+        ladang, supaya pemilik dan pajaknya jelas.
+    deep:
+      - >-
+        Ilmu ukur (geometri) berkembang di Mesir sebagai kelanjutan dari pekerjaan ini: menjaga tata
+        letak dan kepemilikan ladang. Teknik penegangan tali juga menyebar ke Yunani dan India.
+    sources:
+      - title: Rope stretcher (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Rope_stretcher
+        note: penegang tali, upacara fondasi, alat
+      - title: Egyptian geometry (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Egyptian_geometry
+        note: geometri sebagai kelanjutan pengukuran ladang
+    related: [tali-12-simpul, setat, papirus-rhind]
+
+  - id: tali-12-simpul
+    category: concept
+    title: Tali 12 simpul dan segitiga 3-4-5
+    credibility: debated
+    summary: Sering disebut alat penegang tali untuk membuat sudut siku, tetapi belum ada bukti langsung.
+    verify: true
+    body:
+      - >-
+        Tali dengan 12 simpul berjarak sama dapat dibentangkan menjadi segitiga bersisi 3, 4, dan 5
+        ruas. Karena 3² + 4² = 5², segitiga itu bersudut siku di antara sisi 3 dan sisi 4. Cara ini
+        sering disebut dipakai penegang tali Mesir untuk membuat sudut siku pada batas ladang dan
+        fondasi.
+      - >-
+        Di misi ini kamu memakainya begitu: tali 12 simpul, patok A dan B, lalu mencari titik C
+        sehingga ketiga sisi pas 3, 4, dan 5 ruas.
+    deep:
+      - >-
+        Para ahli berbeda pendapat. Sebagian sumber menyebut cara ini sebagai fakta, tetapi tidak ada
+        naskah atau tinggalan yang secara langsung menunjukkan bahwa orang Mesir memakai segitiga 3-4-5
+        untuk membuat sudut siku. Bahwa sudut siku mereka dibuat dengan teliti jelas terlihat pada
+        bangunan; yang tidak terbukti adalah caranya. Karena itu di game ini tali 12 simpul adalah
+        alat bermain, bukan klaim sejarah. Rincian dan sumber ahlinya masih perlu dicek.
+    sources:
+      - title: Rope stretcher (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Rope_stretcher
+        note: klaim pemakaian segitiga 3-4-5, tanpa rujukan bukti
+      - title: Knotted cord (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Knotted_cord
+        note: tali bersimpul sebagai alat ukur
+    related: [harpedonaptai]
+
+  - id: setat
+    category: concept
+    title: Setat (satuan luas)
+    credibility: proven
+    summary: Luas sebuah persegi 1 khet kali 1 khet, kira-kira 2.756 meter persegi.
+    body:
+      - >-
+        Setat adalah satuan luas tanah di Mesir kuno: luas persegi yang tiap sisinya satu khet. Satu
+        khet adalah 100 hasta, kira-kira 52,5 meter, jadi satu setat sekitar 2.756 meter persegi,
+        atau 0,28 hektar.
+      - >-
+        Soal-soal ladang di Papirus Rhind dijawab dalam setat: persegi panjang, segitiga, dan ladang
+        bundar. Karena itu para juru tulis pajak menghitung luas ladang dalam satuan ini.
+    sources:
+      - title: Ancient Egyptian units of measurement (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Ancient_Egyptian_units_of_measurement
+        note: khet, setat
+    related: [hasta, papirus-rhind]
+
+  - id: papirus-rhind
+    category: artifact
+    title: Papirus Matematika Rhind
+    credibility: proven
+    summary: Gulungan soal hitungan dari Mesir kuno, disalin juru tulis Ahmes sekitar 1550 SM.
+    years: [{ start: -1550, approximate: true }]
+    images: [mesir/rhind-papyrus]
+    body:
+      - >-
+        Papirus Rhind adalah salah satu naskah matematika tertua yang kita punyai. Panjangnya lebih
+        dari 5 meter dan tingginya sekitar 33 sentimeter, dan kini disimpan di British Museum,
+        London.
+      - >-
+        Naskah ini disalin oleh juru tulis bernama Ahmes sekitar 1550 SM, dari naskah yang lebih tua
+        dari masa Raja Amenemhat III (Dinasti ke-12, Kerajaan Tengah). Naskah aslinya sudah hilang.
+      - >-
+        Isinya soal-soal beserta penyelesaiannya: pecahan, hitungan roti dan bir, dan geometri ladang.
+        Dua di antaranya kamu pecahkan di misi ini: soal 51 (segitiga) dan soal 50 (lingkaran).
+    deep:
+      - >-
+        Amenemhat III memerintah sekitar 1860 sampai 1814 SM. Karena itu misi ini berlatar sekitar
+        1850 SM, zaman naskah aslinya, bukan 1550 SM, zaman salinannya.
+    sources:
+      - title: Rhind Mathematical Papyrus (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus
+        note: tanggal salinan, juru tulis Ahmes, naskah asli masa Amenemhat III, British Museum
+      - title: Amenemhat III (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Amenemhat_III
+        note: masa pemerintahan sekitar 1860-1814 SM
+    related: [luas-segitiga-mesir, luas-lingkaran-mesir, setat]
+
+  - id: luas-segitiga-mesir
+    category: concept
+    title: Luas segitiga ala Mesir (soal 51)
+    credibility: proven
+    summary: "Setengah alas dikali tinggi: segitiga beralas 4 khet dan tinggi 10 khet luasnya 20 setat."
+    body:
+      - >-
+        Soal 51 Papirus Rhind menanyakan luas ladang berbentuk segitiga dengan tinggi 10 khet dan alas
+        4 khet. Jawabannya 20 setat.
+      - >-
+        Cara juru tulis sama dengan rumus kita: luas = ½ × alas × tinggi. Setengah dari alas 4 adalah
+        2, dan 2 × 10 = 20. Cara lain melihatnya: segitiga itu setengah dari persegi panjang 4 × 10
+        yang membingkainya.
+    sources:
+      - title: Egyptian geometry (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Egyptian_geometry
+        note: luas segitiga = ½ alas × tinggi
+      - title: Rhind Mathematical Papyrus (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus
+    related: [papirus-rhind, setat]
+
+  - id: luas-lingkaran-mesir
+    category: concept
+    title: Luas lingkaran ala Mesir (soal 50)
+    credibility: proven
+    summary: "Kurangi diameter dengan 1/9-nya, lalu kuadratkan: selisihnya dari rumus modern hanya sekitar 0,6%."
+    body:
+      - >-
+        Soal 50 Papirus Rhind menanyakan luas ladang bundar berdiameter 9 khet. Juru tulis
+        mengurangi diameter dengan seperembilannya (9 dikurangi 1 sisa 8), lalu mengalikan sisanya
+        dengan dirinya sendiri: 8 × 8 = 64 setat.
+      - >-
+        Dengan rumus modern (π × jari-jari²) luasnya sekitar 63,6 setat. Cara Mesir hanya lebih besar
+        sekitar 0,6%. Cara itu sama dengan memakai π ≈ 256/81, yaitu sekitar 3,1605 (π sebenarnya
+        3,1416).
+    deep:
+      - >-
+        Cara ini mengganti lingkaran dengan persegi yang sisinya 8/9 dari diameter. Para sejarawan
+        matematika masih membahas bagaimana juru tulis menemukan angka 8/9.
+    sources:
+      - title: Egyptian geometry (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Egyptian_geometry
+        note: soal 50, π ≈ 256/81, galat 0,59%
+    related: [papirus-rhind, setat]
+
+  # ---- M4. Lereng Sempurna ----
+  - id: seked
+    category: concept
+    title: Seked (kemiringan ala Mesir)
+    credibility: proven
+    summary: Berapa telapak sisi piramida bergeser mendatar untuk setiap 1 hasta naik.
+    years: [{ start: -1550, approximate: true }]
+    body:
+      - >-
+        Orang Mesir tidak memakai derajat untuk menyatakan kemiringan. Mereka memakai seked: berapa
+        telapak (dan jari) sisi piramida bergeser mendatar untuk setiap satu hasta naik. Satu hasta
+        adalah 7 telapak, dan satu telapak 4 jari.
+      - >-
+        Cara menghitungnya: seked = (setengah alas ÷ tinggi) × 7 telapak. Makin besar seked, makin
+        landai sisinya. Seked 7 telapak berarti sisi yang naik sebanyak ia bergeser, yaitu 45°.
+      - >-
+        Soal 56 Papirus Rhind memuat contoh aslinya: piramida beralas 360 hasta dan setinggi 250
+        hasta. Setengah alas, 180, dibagi tinggi, 250, menghasilkan ½ + ⅕ + 1/50 hasta. Dikalikan 7
+        telapak, jawabannya 5 1/25 telapak.
+      - >-
+        Seked yang paling sering disebut untuk Piramida Agung adalah 5½ telapak, atau 5 telapak 2
+        jari, sama dengan sekitar 51,84° terhadap bidang datar.
+    deep:
+      - >-
+        Dalam bahasa modern, seked = 7 × kotangen sudut kemiringan. Soal 56 sampai 60 di Papirus Rhind
+        membahas seked. Angka-angka dalam soal itu adalah soal latihan juru tulis, bukan ukuran
+        piramida tertentu.
+      - >-
+        Di game ini alat ukur seked hanya menunjukkan kelipatan jari (seperempat telapak). Karena itu
+        jawaban 5 1/25 telapak dibaca sebagai 5 telapak, kelipatan jari yang terdekat.
+    sources:
+      - title: Seked (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Seked
+        note: definisi, rumus 7 × kotangen, seked 5½ telapak dan 51,84° untuk Piramida Agung
+      - title: Rhind Mathematical Papyrus (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus
+        note: soal 56, alas 360 dan tinggi 250 hasta, hasil 5 1/25 telapak
+    related: [hasta, papirus-rhind, piramida-agung]
+
+  - id: piramida-agung
+    category: place
+    title: Piramida Agung (Khufu)
+    credibility: proven
+    summary: Piramida terbesar di Giza, dibangun sekitar 2600 SM untuk Raja Khufu.
+    years: [{ start: -2600, approximate: true }]
+    images: [mesir/codex-piramida]
+    body:
+      - >-
+        Piramida Agung di Giza dibangun untuk Raja Khufu (Dinasti ke-4) sekitar 2600 SM, dalam kurun
+        sekitar 26 tahun. Tinggi aslinya 146,6 meter, kira-kira 280 hasta, dan tiap sisi alasnya 230,33
+        meter, kira-kira 440 hasta.
+      - >-
+        Sisinya miring 51°50′, atau seked 5½ telapak: angka yang kamu hitung di Gerbang Ukur
+        terakhir. Dulu seluruh permukaannya dilapisi batu kapur putih dari Tura yang dipotong
+        miring dan dihaluskan. Sebagian besar lapisan itu sudah hilang dan kini tingginya 138,5
+        meter.
+      - >-
+        Piramida ini bangunan buatan manusia tertinggi di dunia selama lebih dari 3.800 tahun.
+    deep:
+      - >-
+        Soal bangunan yang pertama melampauinya, sumber saling berbeda. Wikipedia menyebut Katedral Old
+        St Paul's di London (1221 M) pada entri piramida ini, dan Katedral Lincoln (1311 M) memegang
+        rekor itu sesudahnya.
+      - >-
+        Alas 440 hasta dan tinggi 280 hasta adalah ukuran bulat yang dipakai di game. Para peneliti
+        mengukurnya dari bangunan yang sudah rusak, jadi angka sebenarnya sedikit berbeda antar sumber.
+    sources:
+      - title: Great Pyramid of Giza (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+        note: tinggi, alas, sudut 51°50′40″, seked 5½ telapak, lama pembangunan, batu pelapis Tura
+      - title: Lincoln Cathedral (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Lincoln_Cathedral
+        note: tertinggi di dunia 1311-1548, didahului Old St Paul's
+    related: [seked, hemiunu, piramida-bengkok]
+
+  - id: hemiunu
+    category: person
+    title: Hemiunu
+    credibility: tradition
+    summary: Wazir Raja Khufu yang diyakini sebagian ahli sebagai arsitek Piramida Agung.
+    years: [{ start: -2570, approximate: true }]
+    body:
+      - >-
+        Hemiunu adalah pangeran Dinasti ke-4: keponakan Raja Khufu dan putra Pangeran Nefermaat. Ia
+        menjadi wazir, pejabat tertinggi di bawah raja, dan mengawasi pekerjaan bangunan kerajaan.
+      - >-
+        Karena jabatan itu, banyak orang menyebutnya perancang Piramida Agung. Makamnya (mastaba G
+        4000) berdiri tepat di samping piramida itu. Patungnya, yang ditemukan di makam itu pada
+        1912, kini disimpan di Museum Pelizaeus di Hildesheim, Jerman.
+    deep:
+      - >-
+        Tidak ada prasasti yang menyatakan langsung bahwa Hemiunu merancang Piramida Agung. Dugaan itu
+        bertumpu pada gelarnya sebagai pengawas bangunan raja dan letak makamnya, karena itu entri ini
+        berlabel "Menurut tradisi". Di misi ini Hemiunu adalah tokoh nyata, tetapi kata-katanya
+        ditulis oleh game.
+    sources:
+      - title: Hemiunu (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Hemiunu
+        note: 'keluarga, jabatan wazir, makam G 4000, patung di Hildesheim, "diyakini" sebagai arsitek'
+      - title: Great Pyramid of Giza (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+        note: 'disebut "diyakini oleh sebagian orang" sebagai arsitek'
+    related: [piramida-agung]
+
+  - id: piramida-bengkok
+    category: place
+    title: Piramida Bengkok (Sneferu)
+    credibility: debated
+    summary: Piramida di Dahshur yang kemiringannya berubah di tengah jalan; sebabnya masih diperdebatkan.
+    years: [{ start: -2600, approximate: true }]
+    body:
+      - >-
+        Raja Sneferu membangun Piramida Bengkok di Dahshur, sekitar 40 kilometer di selatan Kairo,
+        sekitar 2600 SM. Bagian bawahnya naik dengan sudut 54°27′, tetapi bagian atasnya tiba-tiba lebih
+        landai: 43°22′. Tingginya 104,7 meter.
+      - >-
+        Perubahan sudut di tengah pembangunan itu memperlihatkan betapa pentingnya memilih
+        kemiringan dengan teliti, dan itulah yang membuat bentuknya "bengkok".
+    deep:
+      - >-
+        Para ahli mengusulkan beberapa sebab, dan tidak ada yang disepakati semua. Ada yang menduga
+        bangunan mulai tidak stabil karena terlalu curam. Pada 1974 Kurt Mendelssohn mengusulkan
+        bahwa runtuhnya Piramida Meidum saat dibangun membuat para pembangun memperlandai sudutnya.
+        Yang lain menunjuk ruang gerak jalan tanjakan yang makin sempit di bagian atas. Ada pula yang
+        melihatnya sebagai percobaan pembangunan piramida.
+    sources:
+      - title: Bent Pyramid (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Bent_Pyramid
+        note: Sneferu, Dahshur, sudut 54°27′44″ dan 43°22′, tinggi 104,71 m, beberapa teori sebab
+    related: [piramida-agung, seked]
+
+  # ---- bonus M4: tiga tongkat hasta emas ----
+  - id: tongkat-hasta
+    category: artifact
+    title: Tongkat hasta kerajaan
+    credibility: proven
+    summary: Penggaris para pembangun Mesir, dibagi dalam telapak dan jari; beberapa masih tersimpan.
+    years: [{ start: -1330, approximate: true }]
+    images: [mesir/rod]
+    body:
+      - >-
+        Panjang hasta kerajaan tidak diukur dengan lengan, melainkan dengan tongkat baku. Satu hasta
+        kerajaan sekitar 52,4 sampai 52,9 sentimeter, dibagi 7 telapak, dan tiap telapak dibagi 4
+        jari.
+      - >-
+        Beberapa tongkat asli selamat sampai sekarang, antara lain dua dari makam Maya, bendahara Raja
+        Tutankhamun, di Saqqara, dan satu dari makam Kha di Tebes (semuanya dari Dinasti ke-18).
+        Pada 1865 Lepsius mencatat dan membandingkan empat belas tongkat.
+      - >-
+        Tiga tongkat emas yang kamu kumpulkan di misi ini adalah tiruan bergaya buku cerita dari alat
+        ukur semacam itu.
+    sources:
+      - title: Cubit (Wikipedia)
+        url: https://en.wikipedia.org/wiki/Cubit
+        note: panjang hasta kerajaan 523,5 sampai 529,2 mm, 7 telapak dan 28 jari, tongkat dari makam Maya dan Kha, Lepsius 1865
+    related: [hasta, seked]

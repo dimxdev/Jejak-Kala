@@ -1,0 +1,1 @@
+export { PhaserLabPage } from './PhaserLabPage';

@@ -1,0 +1,244 @@
+# M4. Lereng Sempurna. Rencana: docs/plan-mesir.md. Skema: src/core/missions/schema.ts dan
+# src/core/missions/pyramid-climb/schema.ts. Aturannya: src/core/missions/pyramid-climb/*.ts.
+#
+# Level dicek sebagai satu kesatuan oleh `content:check` (levelProblems): semua ledge terjangkau
+# dengan lompatan yang aman, tidak ada jalan buntu, tongkat bisa disentuh, bahaya tidak curang.
+# Koordinat dalam piksel, y makin besar makin ke bawah. Tiap ledge adalah kolom balok: permukaannya
+# mulai di (x, y) dan selebar w. Daftar ledge ditulis dari kiri ke kanan, naik ke puncak.
+#
+# Tiga soal gerbang memakai angka: model kecil (28 x 14 hasta, 7 telapak), soal 56 Papirus Rhind
+# (360 x 250 hasta, 5 1/25 telapak), dan ukuran bulat Piramida Agung (440 x 280 hasta, 5 1/2 telapak).
+
+id: m4-lereng-sempurna
+engine: pyramid-climb
+
+codex: [seked, piramida-agung, hemiunu, piramida-bengkok]
+# tiga tongkat hasta emas (bintang ketiga)
+bonusCodex: [tongkat-hasta]
+
+intro:
+  background: mesir/m4-bg-giza
+  lines:
+    - who: kala
+      mood: thinking
+      text: >-
+        Kita tiba di dataran Giza, sekitar 2560 SM. Piramida Agung berdiri di depan kita, tetapi belum
+        selesai: batu pelapisnya masih dipasang selapis demi selapis dari bawah.
+    - who: hemiunu
+      text: >-
+        Selamat datang, penjelajah. Aku Hemiunu, wazir Raja Khufu, dan aku mengawasi pembangunan ini.
+    - who: hemiunu
+      text: >-
+        Ada satu hal yang tidak boleh meleset: kemiringan sisinya. Kalau para pemahat memotong batu
+        pelapis dengan kemiringan yang salah, keempat sisi piramida tidak akan bertemu tepat di puncak.
+    - who: kala
+      text: >-
+        Orang Mesir menyebut kemiringan itu seked, dan mengukurnya dalam telapak dan jari. Di tiga
+        Gerbang Ukur sepanjang lereng, kamu akan menghitungnya.
+    - who: kala
+      mood: thinking
+      text: >-
+        Satu catatan jujur: menurut tradisi, Hemiunu-lah arsitek piramida ini, tetapi tidak ada
+        prasasti yang menyebutnya langsung. Kata-katanya di sini ditulis oleh game.
+    - who: hemiunu
+      mood: happy
+      text: Ayo, ikut aku mendaki.
+
+scenes:
+  climb:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        text: >-
+          Lereng ini penuh balok yang masih ditata. Naiklah ke puncak. Di tiap Gerbang Ukur, hitung
+          seked sisi piramidanya, dan gerbang akan terbuka.
+      - who: kala
+        mood: happy
+        text: >-
+          Para pekerja menjatuhkan tiga tongkat hasta emas di sepanjang lereng. Kalau kamu berani
+          melompat tinggi, kumpulkan ketiganya untuk bintang ketiga.
+  gate1:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        text: >-
+          Gerbang pertama memakai piramida model kecil, untuk pemanasan: alasnya 28 hasta dan
+          tingginya 14 hasta.
+      - who: kala
+        text: >-
+          Ingat: seked adalah berapa telapak sisinya bergeser mendatar untuk setiap 1 hasta naik.
+          Satu hasta sama dengan 7 telapak, dan satu telapak sama dengan 4 jari.
+  gate2:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        text: >-
+          Gerbang kedua memuat soal dari Papirus Rhind: piramida beralas 360 hasta dan setinggi 250
+          hasta.
+      - who: kala
+        mood: thinking
+        text: >-
+          Papirus itu disalin sekitar 1550 SM, hampir seribu tahun setelah masa Hemiunu. Soalnya
+          menunjukkan bagaimana juru hitung Mesir memikirkan kemiringan.
+  gate3:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        text: >-
+          Gerbang terakhir adalah piramida ini sendiri: alasnya sekitar 440 hasta dan tingginya
+          sekitar 280 hasta.
+      - who: kala
+        text: >-
+          Angka itu dibulatkan dari ukuran sebenarnya, sekitar 230 meter dan 147 meter. Hitunglah
+          seked yang membuat keempat sisinya bertemu di puncak.
+  summit:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        mood: happy
+        text: >-
+          Puncak! Dengan seked yang tepat, keempat sisi bertemu pada satu titik, dan batu puncak ini
+          yang menutupnya.
+      - who: kala
+        mood: happy
+        text: >-
+          Seked 5½ telapak itu tetap tertulis pada piramida sungguhan. Hampir 4.600 tahun kemudian,
+          kemiringannya masih bisa diukur.
+
+outro:
+  three:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        mood: happy
+        text: >-
+          Kamu mendaki sampai puncak, menghitung tiga seked dengan tepat, dan membawa pulang ketiga
+          tongkat hasta emas. Para pemahatku pasti senang.
+      - who: kala
+        mood: happy
+        text: >-
+          Tongkat hasta sungguhan dari Mesir kuno masih ada di museum, dibagi dalam telapak dan jari
+          seperti alat ukurmu tadi.
+  two:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        text: Kamu sampai di puncak, dan sisi-sisi piramida akan bertemu rapi. Kerja bagus.
+      - who: kala
+        text: >-
+          Masih ada bintang yang bisa diraih: hitung ketiga gerbang tanpa banyak salah coba, dan
+          kumpulkan tiga tongkat hasta emas yang tersebar di lereng.
+  one:
+    background: mesir/m4-bg-giza
+    lines:
+      - who: hemiunu
+        text: >-
+          Puncak sudah tercapai, walau hitunganmu beberapa kali meleset. Itu wajar: para pemahat pun
+          mengukur ulang berkali-kali.
+      - who: kala
+        mood: thinking
+        text: >-
+          Coba lagi dengan lebih tenang: bagi setengah alas dengan tinggi, lalu kalikan dengan 7
+          telapak.
+
+params:
+  art:
+    background: mesir/m4-bg-giza
+    walk: mesir/hemiunu-walk
+    jump: mesir/hemiunu-jump
+    scorpion: mesir/scorpion
+    block: mesir/swing-block
+    gate: mesir/gate
+    rod: mesir/rod
+    capstone: mesir/capstone
+
+  world: { width: 9350, height: 1800 }
+  start: { x: 200 }
+  goal: { x: 8730 }
+
+  # Bagian 1: berlari, tangga kecil, dua celah. Bagian 2: tangga, dua batu pijakan, kalajengking.
+  # Bagian 3: balok ayun, tangga, kalajengking, puncak.
+  ledges:
+    - { x: 0, y: 1500, w: 560 }
+    - { x: 560, y: 1460, w: 300 }
+    - { x: 860, y: 1420, w: 300 }
+    - { x: 1290, y: 1420, w: 360 }
+    - { x: 1650, y: 1370, w: 300 }
+    - { x: 2070, y: 1370, w: 560 }
+    - { x: 2630, y: 1310, w: 240 }
+    - { x: 2870, y: 1250, w: 240 }
+    - { x: 3110, y: 1190, w: 380 }
+    - { x: 3630, y: 1190, w: 140 }
+    - { x: 3910, y: 1190, w: 140 }
+    - { x: 4190, y: 1160, w: 720 }
+    - { x: 5030, y: 1120, w: 560 }
+    - { x: 5590, y: 1070, w: 760 }
+    - { x: 6490, y: 1010, w: 280 }
+    - { x: 6770, y: 950, w: 280 }
+    - { x: 7190, y: 950, w: 560 }
+    - { x: 7870, y: 910, w: 560 }
+    - { x: 8430, y: 860, w: 520 }
+
+  # Pos tempat pemain mulai lagi setelah jatuh atau tersengat, selain titik mulai dan gerbang.
+  checkpoints: [1470, 4220, 7210]
+
+  gates:
+    - x: 2350
+      base: 28
+      height: 14
+      source: model
+      hints:
+        - >-
+          Seked adalah berapa telapak sisi bergeser mendatar untuk setiap 1 hasta naik. Satu hasta
+          sama dengan 7 telapak.
+        - >-
+          Pakai setengah alas, yaitu jarak dari tengah piramida ke sudutnya: 14 hasta. Tingginya
+          juga 14 hasta.
+        - >-
+          Sisi bergeser mendatar sebanyak ia naik: tiap 1 hasta naik, ia bergeser 1 hasta. Berapa
+          telapak 1 hasta itu?
+      explain: >-
+        Sisi yang bergeser sejauh ia naik memiliki seked 7 telapak, yaitu tepat 45°. Piramida
+        sungguhan jauh lebih curam daripada itu.
+    - x: 5310
+      base: 360
+      height: 250
+      source: rhind
+      hints:
+        - >-
+          Pakai setengah alas, bukan seluruh alas: jarak dari tengah piramida ke sudutnya.
+        - >-
+          Setengah alas 180 hasta. Bagi dengan tinggi 250 hasta untuk mendapat berapa hasta
+          mendatar tiap 1 hasta naik.
+        - 180 ÷ 250 = 0,72 hasta. Kalikan dengan 7 telapak untuk mendapat seked.
+      explain: >-
+        Soal 56 Papirus Rhind menulis hasilnya sebagai 5 1/25 telapak. Alat ukurmu hanya menunjukkan
+        kelipatan jari, jadi 5 telapak adalah yang terdekat.
+    - x: 8150
+      base: 440
+      height: 280
+      source: pyramid
+      hints:
+        - "Sama seperti tadi: bagi setengah alas dengan tinggi, lalu kalikan dengan 7 telapak."
+        - Setengah alas 220 hasta, tinggi 280 hasta. 220 ÷ 280 = 11/14 hasta.
+        - 11/14 × 7 telapak = 5½ telapak, yaitu 5 telapak 2 jari.
+      explain: >-
+        Seked sekitar 5½ telapak (51°50′) adalah angka yang paling sering disebut untuk Piramida
+        Agung. Ukuran yang kamu pakai dibulatkan, dan para peneliti mengukur angka sebenarnya
+        sedikit berbeda.
+
+  # tiga tongkat hasta emas, melayang sedikit di atas lompatan penuh
+  rods:
+    - { x: 1470, y: 1205 }
+    - { x: 3980, y: 975 }
+    - { x: 5970, y: 855 }
+
+  # bahaya, hanya di Tantangan
+  scorpions:
+    - { x1: 4490, x2: 4750, y: 1160, speed: 90 }
+    - { x1: 7480, x2: 7660, y: 950, speed: 100 }
+  swingers:
+    - { x: 5970, y: 680, length: 300, amplitude: 55, period: 3.6, phase: 0 }
+
+  mistakesForTwoStars: 3
+  solutionAfter: 3

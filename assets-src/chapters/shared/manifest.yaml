@@ -1,0 +1,114 @@
+# Assets that belong to the whole game, not to one chapter: the world map and the recurring characters.
+# Referenced from content as "shared/<id>". Prompts: bun run assets:prompt shared <id>
+
+chapter: shared
+assets:
+  - id: world-map
+    kind: map
+    status: approved
+    file: chapters/shared/raw/world-map.jpeg
+    chat: 2d82d2bf26eb08f8
+    note: >-
+      First try showed modern country borders in strong terracotta/ochre blocks and a "SUMATRA" label
+      (the island names in the prompt were written on the map). Redone as a physical map. The second
+      try still wrote a gibberish label on Sumatra: it was painted out of the raw file with a small
+      local inpaint (smooth fill from the surrounding island colour). Egypt (Nile delta) sits at
+      about x 38.5%, y 43.5% of the image.
+    subject: >-
+      Scene: an illustrated antique-style physical map of the old world for a history game, with no
+      political borders and no country divisions: all land is one calm warm sand colour with gentle
+      ochre shading for deserts and highlands, small hand-drawn motifs of mountains, forests and dunes,
+      and thin teal rivers (the Nile clearly visible flowing north into the Mediterranean Sea); seas
+      in soft teal; a thin decorative border and a small compass rose in one corner, on cream paper.
+      Europe, Africa, Asia and the islands of Southeast Asia are shown, with the Mediterranean in the
+      middle. Low in contrast and calm so that game icons can be placed on top of it. No text, no
+      letters, no labels, no place names anywhere on the map.
+
+  # Kala: the hourglass spirit who guides the player. The sheet is made first; the portraits continue
+  # in the same Gemini chat so the design stays identical.
+  - id: kala-sheet
+    kind: reference
+    status: approved
+    file: chapters/shared/raw/kala-sheet.jpeg
+    chat: 7dd605048f8e9c34
+    subject: >-
+      Subject: a character design sheet for Kala, a friendly time spirit who guides the player of a
+      history game. Kala is an elegant antique hourglass floating in the air: warm brass frames, clear
+      glass bulbs, softly glowing teal sand, two small expressive eyes with eyebrows on the upper
+      glass bulb, no mouth (emotion is shown by the eyebrows and the flow of the sand), and a faint
+      trail of sparkling sand grains. Show the same character three times in a row in a front view,
+      a three-quarter view and a side view, and below them three expression close-ups: neutral,
+      delighted and thoughtful. Plain soft cream background, evenly spaced, no labels.
+
+  - id: kala-neutral
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/shared/raw/kala-neutral.jpeg
+    chat: 7dd605048f8e9c34
+    subject: >-
+      Now create a portrait of Kala from the character sheet: centered, facing the viewer, the whole
+      hourglass in frame, a neutral friendly expression, in exactly the same style, colours and design
+      as the sheet. Plain soft cream background with a faint warm gradient.
+
+  - id: kala-happy
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/shared/raw/kala-happy.jpeg
+    chat: 7dd605048f8e9c34
+    subject: >-
+      Same Kala, in exactly the same style, design, framing and background as the previous portrait,
+      but now delighted: eyebrows raised high, eyes bright, the teal sand flowing in a lively spiral
+      with extra sparkles.
+
+  - id: kala-thinking
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/shared/raw/kala-thinking.jpeg
+    chat: 7dd605048f8e9c34
+    subject: >-
+      Same Kala, in exactly the same style, design, framing and background as the previous portraits,
+      but now thoughtful: one eyebrow raised, eyes glancing up and to the side, the sand slowing to a
+      thin thread.
+
+  # The player character: three looks to choose from at the start of the game. One costume idea, three
+  # people; made in one Gemini chat so the costume stays identical.
+  - id: traveler-a
+    kind: portrait
+    status: approved
+    file: chapters/shared/raw/traveler-a.jpeg
+    chat: b26b7f9d71fb5744
+    subject: >-
+      Subject: a character portrait of a young adult time traveler, a woman with short wavy black
+      hair and warm light-brown skin, wearing a sand-coloured travel coat with rolled sleeves,
+      aviator goggles pushed up on her forehead, a leather satchel strap across her chest and a small
+      hourglass pendant on a cord, a friendly confident smile, body turned slightly to the left,
+      bust framing, plain soft cream background with a faint warm gradient.
+
+  - id: traveler-b
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/shared/raw/traveler-b.jpeg
+    chat: b26b7f9d71fb5744
+    subject: >-
+      A second time traveler for the same game, in exactly the same style, costume, framing and
+      background as the previous portrait: a young adult man with short black hair, light stubble and
+      tan skin, wearing the same sand-coloured travel coat with rolled sleeves, aviator goggles pushed
+      up on his forehead, the same leather satchel strap and small hourglass pendant, a friendly
+      confident expression, body turned slightly to the right.
+
+  - id: traveler-c
+    kind: portrait
+    followUp: true
+    status: approved
+    file: chapters/shared/raw/traveler-c.jpeg
+    chat: b26b7f9d71fb5744
+    subject: >-
+      A third time traveler for the same game, in exactly the same style, costume, framing and
+      background as the previous portraits: a young adult woman with medium-brown skin wearing a
+      simple teal headscarf with aviator goggles resting on top of it, the same sand-coloured travel
+      coat with rolled sleeves, the same leather satchel strap and small hourglass pendant, a friendly
+      confident smile, body facing the viewer.
